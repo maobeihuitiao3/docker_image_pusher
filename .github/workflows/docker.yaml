@@ -4,7 +4,8 @@ on:
   workflow_dispatch:
   push:
     branches: [ main ]
-
+  schedule:
+    - cron: '55 1 * * *' # 每天 UTC 时间 1 点 55 分执行
 
 env:
   ALIYUN_REGISTRY: "${{ secrets.ALIYUN_REGISTRY }}"
